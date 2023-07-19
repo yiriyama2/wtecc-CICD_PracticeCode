@@ -17,8 +17,7 @@ jobs:
             - name: Install dependencies
               run: |
                 python -m pip install --upgrade pip
-                pwd
-                pip3 install -r ~/requirments.txt
+                pip3 install -r ~/wtecc-CICD_PracticeCode/requirments.txt
 
             - name: Lint with flake8
               run: |
