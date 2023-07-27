@@ -1,0 +1,14 @@
+apiVersion: tekton.dev/v1beta1
+kind: Task
+metadata:
+  name: my-task
+spec:
+  params:
+    - name: output
+      description: an output
+      type: string
+  steps:
+    - name: sakebu
+      image: alpine:3
+      command: [/bin/echo]
+      args: ["$(params.output)"]
