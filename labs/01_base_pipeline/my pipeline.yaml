@@ -1,0 +1,14 @@
+apiVersion: tekton.dev/v1beta1
+kind: Pipeline
+metadata:
+  name: my-pipeline
+spec:
+  params:
+    - name: hoge
+  tasks:
+    - name: shori
+      taskRef:
+        name: my-task
+      params:
+        - name: output
+          value: "$(params.hoge)"
